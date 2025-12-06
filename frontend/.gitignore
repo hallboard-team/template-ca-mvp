@@ -1,0 +1,70 @@
+########################################
+# Editor / IDE (user-specific)
+########################################
+
+*.swp
+*.suo
+*.user
+*.userosscache
+
+# Rider junk
+.idea
+
+# Optional: uncomment if you DON'T want team-wide VS Code configs
+# .vscode/
+
+########################################
+# Node / Angular build outputs
+########################################
+
+dist/
+build/
+out/
+tmp/
+temp/
+
+########################################
+# Dependencies (always ignore)
+########################################
+
+node_modules/
+.pnpm-store/
+
+########################################
+# Logs
+########################################
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+########################################
+# Angular environments (if dynamic)
+########################################
+
+# You can choose whether to track these — template repos usually DO track.
+# adjust as needed:
+# environment*.ts
+
+########################################
+# Dev Containers + Podman (keep infra files)
+########################################
+
+# Do NOT ignore these:
+# .devcontainer/
+# podman/
+# docker-compose.devcontainer.yml
+# podman-compose.frontend.yml
+# pull-start-dev.sh
+
+# Ignore VS Code server artifacts (inside container)
+.vscode-server/
+
+########################################
+# OS junk
+########################################
+
+.DS_Store
+Thumbs.db
