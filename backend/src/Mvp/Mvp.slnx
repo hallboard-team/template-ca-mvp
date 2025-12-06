@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="../../tests/Mvp.Core.Tests/Mvp.Core.Tests.csproj" />
+  <Project Path="../../tests/Mvp.Infrastructure.Tests/Mvp.Infrastructure.Tests.csproj" />
+  <Project Path="../../tests/Mvp.WebApi.Tests/Mvp.WebApi.Tests.csproj" />
+  <Project Path="Mvp.Contracts/Mvp.Contracts.csproj" />
+  <Project Path="Mvp.Core/Mvp.Core.csproj" />
+  <Project Path="Mvp.Infrastructure/Mvp.Infrastructure.csproj" />
+  <Project Path="Mvp.WebApi/Mvp.WebApi.csproj" />
+</Solution>

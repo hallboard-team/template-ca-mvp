@@ -1,0 +1,22 @@
+{
+  "name": "dev-${localWorkspaceFolderBasename}",
+  "dockerComposeFile": "./podman/podman-compose.backend.yml",
+  "service": "mvp-backend",
+  "workspaceFolder": "/workspaces/app",
+  "shutdownAction": "stopCompose",
+  "updateRemoteUserUID": false,
+  "remoteEnv": {
+    "VSCODE_SERVER_DIR": "/vscode/vscode-server"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "github.vscode-pull-request-github"
+      ]
+    }
+  }
+}

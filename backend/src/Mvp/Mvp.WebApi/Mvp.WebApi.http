@@ -1,0 +1,6 @@
+@Mvp.WebApi_HostAddress = http://localhost:5111
+
+GET {{Mvp.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

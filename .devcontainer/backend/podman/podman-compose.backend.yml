@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  api-postgres:
+  mvp-backend:
     image: ghcr.io/hallboard-team/dotnet-v${DOTNET_VERSION:-10.0}:latest
     container_name: ${CONTAINER_NAME:-template}_api_postgres-v${POSTGRES_VERSION:-17}-dev
 
@@ -9,7 +9,7 @@ services:
     working_dir: /workspaces/app
 
     volumes:
-      - ../:/workspaces/app:Z
+      - ../../../:/workspaces/app:Z
       - ~/.cache/vscode-server-shared:/home/vscode/.vscode-server-shared:Z
 
     environment:
