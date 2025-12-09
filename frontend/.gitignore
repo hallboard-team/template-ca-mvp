@@ -49,14 +49,14 @@ pnpm-debug.log*
 # environment*.ts
 
 ########################################
-# Dev Containers + Podman (keep infra files)
+# Dev Containers + Docker (keep infra files)
 ########################################
 
 # Do NOT ignore these:
 # .devcontainer/
-# podman/
+# docker/
 # docker-compose.devcontainer.yml
-# podman-compose.frontend.yml
+# docker-compose.frontend.yml
 # pull-start-dev.sh
 
 # Ignore VS Code server artifacts (inside container)

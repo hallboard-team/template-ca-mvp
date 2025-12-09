@@ -38,13 +38,13 @@ out/
 Thumbs.db
 
 ########################################
-# DevContainer & Podman (host-only)
+# DevContainer & Docker (host-only)
 ########################################
 
 .devcontainer/
-podman/
+docker/
 docker-compose*
-podman-compose*
+docker-compose*
 
 ########################################
 # Anything not needed inside the build context

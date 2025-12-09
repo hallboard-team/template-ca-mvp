@@ -26,7 +26,7 @@ POSTGRES_VERSION="${6:-17}"
 IMAGE="ghcr.io/hallboard-team/dev-full-dotnet-v${DOTNET_VERSION}_node-v${NODE_VERSION}_angular-v${ANGULAR_VERSION}:latest"
 CONTAINER_NAME="template-mvp_dev-full_d${DOTNET_VERSION}_n${NODE_VERSION}_a${ANGULAR_VERSION}_pg${POSTGRES_VERSION}_p${API_PORT}-${FRONTEND_PORT}_dev"
 
-COMPOSE_FILE="podman-compose.yml"
+COMPOSE_FILE="docker-compose.yml"
 
 echo "=========================================="
 echo " FULL DEV STACK STARTER"
@@ -50,11 +50,11 @@ sudo chown -R 1000:1000 ~/.cache/vscode-server-shared || true
 # ---------------------------------------------------------
 # Ensure dev-full image exists (pull if needed)
 # ---------------------------------------------------------
-if podman image exists "$IMAGE"; then
+if docker image exists "$IMAGE"; then
   echo "🧱 Image '$IMAGE' already exists locally — skipping pull."
 else
   echo "📥 Pulling dev image '$IMAGE' from GHCR..."
-  if ! podman pull "$IMAGE"; then
+  if ! docker pull "$IMAGE"; then
     echo "❌ Failed to pull '$IMAGE'. Check GHCR auth & image name."
     exit 1
   fi
@@ -72,9 +72,9 @@ if CONTAINER_NAME="$CONTAINER_NAME" \
    POSTGRES_VERSION="$POSTGRES_VERSION" \
    API_PORT="$API_PORT" \
    FRONTEND_PORT="$FRONTEND_PORT" \
-   podman-compose -f "$COMPOSE_FILE" up -d; then
+   docker-compose -f "$COMPOSE_FILE" up -d; then
 
-  if podman ps --filter "name=$CONTAINER_NAME" --format '{{.Names}}' \
+  if docker ps --filter "name=$CONTAINER_NAME" --format '{{.Names}}' \
         | grep -q "$CONTAINER_NAME"; then
     echo "✅ FULL dev stack '$CONTAINER_NAME' started successfully!"
     echo "   API:      http://localhost:$API_PORT"
@@ -84,6 +84,6 @@ if CONTAINER_NAME="$CONTAINER_NAME" \
     exit 1
   fi
 else
-  echo "❌ podman-compose failed to start '$CONTAINER_NAME'."
+  echo "❌ docker-compose failed to start '$CONTAINER_NAME'."
   exit 1
 fi

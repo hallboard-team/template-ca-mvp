@@ -1,6 +1,6 @@
 {
   "name": "dev-${localWorkspaceFolderBasename}-full",
-  "dockerComposeFile": "./podman/podman-compose.full.yml",
+  "dockerComposeFile": "./docker/docker-compose.full.yml",
   "service": "dev-full",
   "workspaceFolder": "/workspaces/app",
   "shutdownAction": "stopCompose",
