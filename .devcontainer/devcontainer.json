@@ -19,13 +19,14 @@
 
         "mtxr.sqltools",
         "mtxr.sqltools-driver-pg",
-        "maptz.regionfolder",
+
         "formulahendry.auto-close-tag",
         "formulahendry.auto-rename-tag",
         "Angular.ng-template",
         "johnpapa.Angular2",
         "solnurkarim.html-to-css-autocompletion",
         
+        "maptz.regionfolder",
         "github.vscode-pull-request-github",
         "PKief.material-icon-theme",
         "johnpapa.vscode-peacock",
