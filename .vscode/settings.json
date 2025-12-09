@@ -1,4 +1,8 @@
 {
   "remoteUser": "root",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true
+  }
 }
