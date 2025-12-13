@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   dev-full:
-    image: ghcr.io/hallboard-team/dev-full-dotnet-v${DOTNET_VERSION:-10.0}_node-v${NODE_VERSION:-24}_angular-v${ANGULAR_VERSION:-20}:latest
+    image: ghcr.io/hallboard-team/fullstack-dev:dotnet${DOTNET_VERSION:-10}-node${NODE_VERSION:-24}-ng${ANGULAR_VERSION:-21}
     container_name: ${CONTAINER_NAME:-template-mvp}_dev-full
 
     user: "0:0"

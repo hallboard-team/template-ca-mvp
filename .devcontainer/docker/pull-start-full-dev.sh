@@ -6,7 +6,7 @@
 #   ./pull-start-full-dev.sh [api_port] [frontend_port] [dotnet_version] [node_version] [angular_version] [postgres_version]
 #
 # Example:
-#   ./pull-start-full-dev.sh 5002 4202 10.0 24 20 17
+#   ./pull-start-full-dev.sh 5002 4202 10 24 21 17
 #
 # Starts:
 #   - dev-full (dotnet + node + angular)
@@ -18,12 +18,12 @@ cd "$(dirname "$0")"
 
 API_PORT="${1:-5002}"
 FRONTEND_PORT="${2:-4202}"
-DOTNET_VERSION="${3:-10.0}"
+DOTNET_VERSION="${3:-10}"
 NODE_VERSION="${4:-24}"
-ANGULAR_VERSION="${5:-20}"
+ANGULAR_VERSION="${5:-21}"
 POSTGRES_VERSION="${6:-17}"
 
-IMAGE="ghcr.io/hallboard-team/dev-full-dotnet-v${DOTNET_VERSION}_node-v${NODE_VERSION}_angular-v${ANGULAR_VERSION}:latest"
+IMAGE="ghcr.io/hallboard-team/fullstack-dev:dotnet${DOTNET_VERSION}-node${NODE_VERSION}-ng${ANGULAR_VERSION}"
 CONTAINER_NAME="template-mvp_dev-full_d${DOTNET_VERSION}_n${NODE_VERSION}_a${ANGULAR_VERSION}_pg${POSTGRES_VERSION}_p${API_PORT}-${FRONTEND_PORT}_dev"
 
 COMPOSE_FILE="docker-compose.yml"
