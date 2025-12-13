@@ -10,7 +10,7 @@ services:
 
     volumes:
       - ../../:/workspaces/app:Z
-      - ~/.cache/vscode-server-shared:/home/vscode/.vscode-server-shared:Z
+      - ${HOME}/.cache/vscode-server-shared:/home/vscode/.vscode-server-shared:Z
 
     environment:
       ASPNETCORE_ENVIRONMENT: Development

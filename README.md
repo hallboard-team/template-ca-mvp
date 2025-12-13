@@ -1,2 +1,2 @@
-This is an Angular env template for development incorporating Docker. 
-* Please your project in the `src` fodler.
+This is a MVP Clean Architecture env template for development incorporating Docker. 
+* Place your projects in the `backend` and `frontend` folders.
